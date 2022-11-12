@@ -8,6 +8,7 @@ export default defineConfig({
   },
   plugins: [svelte()],
   build: {
-    cssCodesplit: false
+    cssCodesplit: false,
+    outDir: 'docs'
   }
 });
