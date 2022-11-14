@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import autoprefixer from "autoprefixer";
-import dns from 'dns'
+// import dns from 'dns'
 
-dns.setDefaultResultOrder('verbatim')
+// dns.setDefaultResultOrder('verbatim')
 
 // https://vitejs.dev/config/
 export default defineConfig(({command, mode}) => {
@@ -25,6 +25,7 @@ export default defineConfig(({command, mode}) => {
       port: 8000,
     },
     server: {
+      host: true,
       port: 8080,
     },
     base: "./",
