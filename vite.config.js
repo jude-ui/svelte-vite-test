@@ -1,14 +1,33 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
+import autoprefixer from "autoprefixer";
+import dns from 'dns'
+
+dns.setDefaultResultOrder('verbatim')
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  server: {
-    port: 8080,
-  },
-  plugins: [svelte()],
-  build: {
-    cssCodesplit: false,
-    outDir: 'docs'
-  }
+export default defineConfig(({command, mode}) => {
+  return {
+    css: {
+      postcss: {
+        plugins: [autoprefixer()],
+      },
+    },
+    resolve: {
+      alias: [{ find: "@", replacement: `${__dirname}/src` }],
+    },
+    build: {
+      outDir: "docs",
+      sourcemap: true,
+      // cssCodeSplit: false,
+    },
+    preview: {
+      port: 8000,
+    },
+    server: {
+      port: 8080,
+    },
+    base: "./",
+    plugins: [svelte()],
+  };
 });
