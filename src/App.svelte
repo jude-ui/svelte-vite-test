@@ -15,6 +15,8 @@
     <a href="https://svelte.dev" target="_blank" rel="noreferrer"> 
       <img src="{svelteLogo}" class="logo svelte" alt="Svelte Logo" />
     </a>
+    <div class="test_css"></div>
+    <div class="test_scss"></div>
   </div>
   <h1 class="tit_test" style="">{tit}</h1>
   <h2 style="color:var(--secondary)">Vite + Svelte</h2>

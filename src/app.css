@@ -90,3 +90,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.test_css{
+  width: 100px;
+  height: 100px;
+  background:url('./assets/svelte.svg') 50% 50% no-repeat;
+  background-size: cover;
+}
