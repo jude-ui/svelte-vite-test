@@ -1,7 +1,5 @@
 <script>
-  // import ImportMetaSet from './vite-env'
   let tit = 'vite와 svelte 프로젝트'
-  console.log(import.meta.env.PROD)
   
   import Counter from './components/Counter.svelte'
   import svelteLogo from './assets/svelte.svg'
@@ -13,7 +11,7 @@
       <img src="./vite/vite.svg" class="logo" alt="Vite Logo" />
     </a>
     <a href="https://svelte.dev" target="_blank" rel="noreferrer"> 
-      <img src="{svelteLogo}" class="logo svelte" alt="Svelte Logo" />
+      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
       <img src="/src/assets/svelte.svg" class="logo svelte" alt="Svelte Logo" />
     </a>
     <div class="test_css"></div>
